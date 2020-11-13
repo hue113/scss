@@ -1,0 +1,33 @@
+$font: 'arial';
+$bg: #FF99FF;
+
+
+// define a placeholder
+%box {
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    background: $bg;
+    border-radius: 10px;
+}
+
+.box1 {
+    @extend %box;                   // extend from placeholder
+
+    &-text {
+        text-align: center;
+        font {
+            size: 1em;
+            weight: bold;
+            family: $font;
+        }
+    }
+}
+
+.box2 {
+    @extend .box1;                  // extend from class
+
+    &-text {
+        @extend .box1-text;         // extend from class
+    }
+}
