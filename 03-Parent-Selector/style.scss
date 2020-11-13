@@ -1,0 +1,27 @@
+.box {
+    background-color: #999;
+    height: 100px;
+    width: 300px;
+    border-radius: 20px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // &  =  .box
+    // &-text = .box-text
+    &-text {
+        font: {
+            family: 'arial';
+            size: 1.5em;
+            weight: bold;
+        }
+    }
+
+    &:hover &-text {
+        color: #fff;
+    }
+
+
+}
+
