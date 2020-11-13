@@ -1,0 +1,143 @@
+01-Nested
+    npm install -g sass
+    sass style.scss style.css --watch
+
+    .parents {
+        .child{
+            .grandchild{
+            }
+        }
+    }
+
+02-Nested-Property
+        font: {
+            family: 'arial';
+            size: 1.5em;
+            weight: bold;
+        }
+
+
+03-Parent-selector (&)
+    .box {
+        &-text {
+        }
+        &:hover &-text {
+        }
+    }
+
+Note:       &  =  .box              (parent-selector)
+            &-text = .box-text
+
+
+04-variable
+    $width: 100px;      -->  width: $width;
+
+05-Interpolation
+    $width: 100px;      
+    $key: width;        -->  #{$key}: $width;
+
+
+06-@mixin-@include
+@mixin:     a css template that you define in your own way!
+            can be re-used
+
+To create a mixin:
+    @mixin name (<arguments...>) {       // args is optional
+         ... 
+    }
+
+To use mixin:
+    @include name (<arg value...>);
+
+
+07-@extend
+can @extend     %placeholder;       (must define placeholder first)
+                .class;
+                #id;
+
+
+08-@if-@else
+use in @mixin or %placeholder 
+
+
+09-List-@each
+use to write css style for each element of a list 
+    write once, use for all similar items
+    similar to for-each loop
+can be used with Maps also
+
+Example:
+    $sizes: 20, 50, 100;
+    @each $size in $sizes {
+        .bar-#{$size} {
+            width: $size * 5px;
+            @extend %common;
+        }
+    }
+
+
+10-Maps
+key: value
+
+Example:
+    $sizes: (
+        20: 20px,
+        50: 50px,
+        100: 100px
+    );
+    @each $key, $value in $sizes {
+        .bar-#{$key} {
+            width: $value * 5;
+            @extend %common;
+        }
+    }
+
+
+11-@for-@while-loop
+
+
+12-List-methods-@debug
+https://sass-lang.com/documentation/modules/list
+List methods:   
+    append              : add 1 new element to list
+    nth                 : find element's value at specific index  
+    set-nth             : set new element at specific index
+    length              : find length of list
+
+@debug:  prints the value
+
+13-Map-method
+https://sass-lang.com/documentation/modules/map
+Map methods:
+    map-get                 : get value by key in a map
+    map-remove              : remove 1 key-value pair from map
+    map-merge               : merge 2 maps together
+    map-values              : return all value of each key in a map
+
+
+14-gulp-cli
+https://kipalog.com/posts/Su-dung-Gulp-de-viet-Sass-hieu-qua
+
+https://gulpjs.com/docs/en/getting-started/quick-start
+https://www.npmjs.com/package/gulp-sass
+
+gulp:  compile from SCSS to CSS (lighter version to use in browsers)
+    SCSS/SASS   }   
+    SCSS/SASS   }   ------------>     CSS     ------------->    css min 
+    SCSS/SASS   }      (sass)                    (gulp)
+
+
+Install:
+    npm install --global gulp-cli           (global)
+    npm install gulp --save-dev             (package, must 'npm init' first)
+    npm install gulp-sass --save-dev
+    npm install gulp-uglify --save-dev
+    npm install gulp-uglifycss --save       https://www.npmjs.com/package/gulp-uglifycss
+
+Terminal command:       
+    gulp + taskName
+
+
+
+
+    
