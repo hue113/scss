@@ -1,0 +1,15 @@
+.box1 {
+  background-color: #999;
+  height: 100px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+.box2 {
+  background-color: blue;
+  height: 300px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+$width: 100px;
+
+.box1 {
+    background-color: #999;
+    height: 100px;
+    width: $width;
+    border-radius: 20px;
+}
+
+.box2 {
+    background-color: blue;
+    height: 300px;
+    width: $width;
+    border-radius: 20px;
+}
