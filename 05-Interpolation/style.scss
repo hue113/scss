@@ -1,0 +1,17 @@
+$width: 100px;
+$key: width;
+
+.box1 {
+    background-color: #999;
+    height: 100px;
+    #{$key}: $width;        // $key: width;
+    // width: $width;
+    border-radius: 20px;
+}
+
+.box2 {
+    background-color: blue;
+    height: 300px;
+    #{$key}: $width;
+    border-radius: 20px;
+}
