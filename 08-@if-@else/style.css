@@ -1,0 +1,25 @@
+.box1 {
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  background: #FF99FF;
+  border-radius: 10px;
+}
+.box1-text, .box2-text {
+  text-align: center;
+}
+.box1-text font, .box2-text font {
+  size: 1em;
+  weight: bold;
+  family: "arial";
+}
+
+.box2 {
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  background: #FF99FF;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

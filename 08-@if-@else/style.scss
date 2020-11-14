@@ -1,0 +1,39 @@
+
+$font: 'arial';
+$bg: #FF99FF;
+
+@mixin box ($w, $h, $lh, $bg, $circle: false) {
+    width: $w;
+    height: $h;
+    line-height: $lh;
+    background: $bg;
+
+    @if ($circle == true) {
+        border-radius: 50%;
+    } @else {
+        border-radius: $h / 10;
+    }
+}
+
+.box1 {
+    // if no arg for $circle
+    // default value for $circle: false
+    @include box (200px, 100px, 100px, $bg);
+
+    &-text {
+        text-align: center;
+        font {
+            size: 1em;
+            weight: bold;
+            family: $font;
+        }
+    }
+}
+
+.box2 {
+    @include box (200px, 100px, 100px, $bg, true);
+
+    &-text {
+        @extend .box1-text;         // extend from class
+    }
+}
