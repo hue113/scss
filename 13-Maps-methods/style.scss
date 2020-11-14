@@ -1,0 +1,23 @@
+/*
+    map-get                 : get value by key in a map
+    map-remove              : remove 1 key-value pair from map
+    map-merge               : merge 2 maps together
+    map-values              : return all value of each key in a map
+*/
+
+$map: (long: 50px, medium: 30px, short: 10px);
+$map2: (long2: 50px, medium2: 30px, short2: 10px);
+
+@debug map-get($map, medium);
+// @debug map-get($map: $map, $key: medium);
+
+
+$newList: map-remove($map, long);           // map-remove($map: $map, $keys: long);
+@debug $newList;
+@debug $map;
+
+
+@debug map-merge($map, $map2);              
+@debug map-merge($map, (center: 100px));     
+
+@debug map-values($map);                
