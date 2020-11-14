@@ -1,0 +1,21 @@
+.bar-100, .bar-50, .bar-20 {
+  background: #00e5ff;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5px;
+}
+
+.bar-20 {
+  width: 100px;
+}
+
+.bar-50 {
+  width: 250px;
+}
+
+.bar-100 {
+  width: 500px;
+}
+
+/*# sourceMappingURL=style.css.map */

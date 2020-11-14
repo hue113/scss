@@ -1,0 +1,29 @@
+%common {
+    background: #00e5ff;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+}
+
+$sizes: (
+    20: 20px,
+    50: 50px,
+    100: 100px
+);
+
+@each $key, $value in $sizes {
+    .bar-#{$key} {
+        width: $value * 5;
+        @extend %common;
+    }
+}
+
+// $sizes: 20, 50, 100;
+
+// @each $size in $sizes {
+//     .bar-#{$size} {
+//         width: $size * 5px;
+//         @extend %common;
+//     }
+// }
