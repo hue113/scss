@@ -1,0 +1,29 @@
+/*
+    append              : add 1 new element to list
+    nth                 : find element's value at specific index  
+    set-nth             : set new element at specific index
+    length              : find length of list
+*/
+
+$list: 1px, 2px, 5px;           // create a new list
+$newList: append($list, 4px);
+@debug $list;
+@debug $newList;
+
+
+$item: nth($list, 1);           // find value of index (start at 1)
+@debug $item;
+
+
+$new-item: set-nth($list, 3, 20px);         // params:  list-index-value 
+// $new-item: set-nth($list: $list, $n: 3, $value: 20px);
+@debug $new-item;
+@debug $list;
+
+
+@debug length($list);
+
+
+@for $i from 1 through length($list) {
+    @debug nth($list, $i);
+}
