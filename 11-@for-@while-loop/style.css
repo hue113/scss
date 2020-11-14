@@ -1,0 +1,55 @@
+.card1 {
+  width: 500px;
+  background: #adadad;
+  margin: 20px;
+  padding: 20px;
+}
+.card1 .content1 {
+  margin: 10px;
+  padding: 10px;
+}
+
+.content1:nth-child(1) {
+  opacity: 0.1;
+}
+
+.content1:nth-child(2) {
+  opacity: 0.2;
+}
+
+.content1:nth-child(3) {
+  opacity: 0.3;
+}
+
+.content1:nth-child(4) {
+  opacity: 0.4;
+}
+
+.card2 {
+  width: 500px;
+  background: #adadad;
+  margin: 20px;
+  padding: 20px;
+}
+.card2 .content2 {
+  margin: 10px;
+  padding: 10px;
+}
+
+.content2:nth-child(1) {
+  opacity: 0.1;
+}
+
+.content2:nth-child(2) {
+  opacity: 0.2;
+}
+
+.content2:nth-child(3) {
+  opacity: 0.3;
+}
+
+.content2:nth-child(4) {
+  opacity: 0.4;
+}
+
+/*# sourceMappingURL=style.css.map */
